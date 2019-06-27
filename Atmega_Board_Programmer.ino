@@ -1,14 +1,4 @@
 #define ARDUINO_TYPE MEGA
-
-/* ----------------------------------------------------------------------------
-WARNING: The Arduino Leonardo, Arduino Esplora and the Arduino Micro all use the same chip (ATmega32U4).
-They will all have the Leonardo bootloader burnt onto them. This means that if you have a
-Micro or Esplora it will be identified as a Leonardo in the Tools -> Serial Port menu.
-This is because the PID (Product ID) in the USB firmware will be 0x0036 (Leonardo).
-This only applies during the uploading process. You should still select the correct board in the
-Tools -> Boards menu.
------------------------------------------------------------------------------- */
-
 #define VERSION "1.38"
 
 // make true to use ICSP programming
@@ -98,8 +88,8 @@ const bootloaderType bootloaders [] PROGMEM =
         at90usb82_bin,// loader image
         sizeof at90usb82_bin,
         0xEF,         // fuse low byte: external clock, m
-        0xD9,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
-        0xF4,         // fuse extended byte: brown-out detection at 2.6V
+        0xD8,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
+        0xFC,         // fuse extended byte: brown-out detection at 2.6V
         0xCF },       // lock bits
         
   // USE_AT90USB162
@@ -108,8 +98,8 @@ const bootloaderType bootloaders [] PROGMEM =
         at90usb162_bin,// loader image
         sizeof at90usb162_bin,
         0xEF,         // fuse low byte: external clock, m
-        0xD9,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
-        0xF4,         // fuse extended byte: brown-out detection at 2.6V
+        0xD8,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
+        0xFC,         // fuse extended byte: brown-out detection at 2.6V
         0xCF },       // lock bits
   // ATmega8U2
   { { 0x1E, 0x93, 0x89 },
@@ -117,8 +107,8 @@ const bootloaderType bootloaders [] PROGMEM =
         atmega8u2_bin,// loader image
         sizeof atmega8u2_bin,
         0xEF,         // fuse low byte: external clock, m
-        0xD9,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
-        0xF4,         // fuse extended byte: brown-out detection at 2.6V
+        0xD8,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
+        0xFC,         // fuse extended byte: brown-out detection at 2.6V
         0xCF },       // lock bits
   // ATmega16U2
   { { 0x1E, 0x94, 0x89 },
@@ -126,8 +116,8 @@ const bootloaderType bootloaders [] PROGMEM =
         atmega16u2_bin,// loader image
         sizeof atmega16u2_bin,
         0xEF,         // fuse low byte: external clock, m
-        0xD9,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
-        0xF4,         // fuse extended byte: brown-out detection at 2.6V
+        0xD8,         // fuse high byte: SPI enable, NOT boot into bootloader, 4096 byte bootloader
+        0xFC,         // fuse extended byte: brown-out detection at 2.6V
         0xCF },       // lock bits
 
   // ATmega32U2
